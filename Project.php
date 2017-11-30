@@ -1,4 +1,5 @@
 
+
 <?php
 $connection = @mysqli_connect (localhost, root, Jc2011368, login);
 if(mysqli_connect_errno())
@@ -67,3 +68,5 @@ echo "<h4>Successfully connected to MySQL: </h4>";
 </div> 
 </body> 
 </html>
+
+
