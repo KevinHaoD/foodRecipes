@@ -1,5 +1,10 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
 <?php
-$connection = @mysqli_connect (localhost, dara6996@colorado.edu, danraf12, loginAccounts); 
+
 
 if(mysqli_connect_errno())
 { 
@@ -12,24 +17,26 @@ echo "<h4>Successfully connected to MySQL: </h4>";
 
 
 function NewUser()
-{
+{	
+	
+	$connect = @mysqli_connect (localhost, root, , loginAccounts);#You have to put your password in between root, and loginAccounts for this to work
 	$email = $_POST['email'];
 	$password =  $_POST['password'];
 	$query = "INSERT INTO user (email,password) VALUES ('$email','$password')";
-	$data = mysql_query ($query)or die(mysql_error());
+	$data = mysqli_query ($connect, $query); #or die(mysqli_error());
 	if($data)
 	{
 	echo "YOUR REGISTRATION IS COMPLETED...";
 	}
 }
-
+#This function does not work yet so I skipped calling it in the if statement below it and just called NewUser() instead -Joel
 function SignUp()
 {
 if(!empty($_POST['user']))   //checking the 'user' name which is from Sign-Up.html, is it empty or have some text
 {
-	$query = mysql_query("SELECT * FROM user WHERE email = '$_POST[user]' AND pass = '$_POST[pass]'") or die(mysql_error());
+	$query = mysqli_query("SELECT * FROM user WHERE email = '$_POST[email]' AND pass = '$_POST[password]'") or die(mysql_error());
 
-	if(!$row = mysql_fetch_array($query) or die(mysql_error()))
+	if(!$row = mysql_fetch_array($query) or die(mysqli_error()))
 	{
 		NewUser();
 	}
@@ -41,9 +48,12 @@ if(!empty($_POST['user']))   //checking the 'user' name which is from Sign-Up.ht
 }
 if(isset($_POST['submit']))
 {
-	SignUp();
+	echo "<h4>Successfully received submit: </h4>";
+	NewUser();
 }
 
 ?>
 
+</body>
+<html>
 
