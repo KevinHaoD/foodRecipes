@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <?php
 $connection = @mysqli_connect (localhost, root, Jc2011368, login);
 if(mysqli_connect_errno())
@@ -10,24 +14,29 @@ else
 echo "<h4>Successfully connected to MySQL: </h4>";
 }
 
-$name = $_POST('name');
-$email = $_POST['email']; 
-$user = $_POST['user']; 
-$pass = $_POST['pass']; 
-$cpass = $_POST['cpass']; 
+$name = $_REQUEST['name'];
+$email = $_REQUEST['email']; 
+$user = $_REQUEST['user']; 
+$pass = $_REQUEST['pass']; 
+$cpass = $_REQUEST['cpass']; 
 
 if($pass = $cpass)
 {
-$query = "insert into login (name, email, user, pass) values($name,$email,$user,$pass);";
-$resultset = mysqli_query($query);
-echo "Inserted successfully into the database";
+	$query = "insert into login (name, email, user, pass) values('$name','$email','$user','$pass');";
+	$resultset = mysqli_query($connection, $query);
+	if($resultset){
+	    echo "Records added successfully.";
+	} 
+	else{
+	    echo "ERROR: Could not able to execute $query. " . mysqli_error($connection);
+	}
 }
 else
 {
 echo "Passwords don't match";
 }
+mysqli_close($connection);
 /*
-if(isset($_POST
 
 function NewUser() { 
 	$name = $_POST['name']; 
@@ -56,3 +65,6 @@ if(isset($_POST['submit'])) {
 }
 */
 ?>
+
+</body>
+</html>
