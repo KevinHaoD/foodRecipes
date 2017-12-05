@@ -21,7 +21,7 @@ $cpass = $_REQUEST['cpass'];
 
 if($pass = $cpass)
 {
-	$query = "insert into login (email, user, pass) values('$email','$user','$pass');";
+	$query = "insert into login (email, username, password) values('$email','$user','$pass');";
 	$resultset = mysqli_query($connection, $query);
 	if($resultset){
 	    echo "Records added successfully.";
