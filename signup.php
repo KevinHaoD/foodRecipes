@@ -14,7 +14,6 @@ else
 echo "<h4>Successfully connected to MySQL: </h4>";
 }
 
-$name = $_REQUEST['name'];
 $email = $_REQUEST['email']; 
 $user = $_REQUEST['user']; 
 $pass = $_REQUEST['pass']; 
@@ -22,7 +21,7 @@ $cpass = $_REQUEST['cpass'];
 
 if($pass = $cpass)
 {
-	$query = "insert into login (name, email, user, pass) values('$name','$email','$user','$pass');";
+	$query = "insert into login (email, user, pass) values('$email','$user','$pass');";
 	$resultset = mysqli_query($connection, $query);
 	if($resultset){
 	    echo "Records added successfully.";
