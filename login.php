@@ -26,6 +26,8 @@ if($u["username"] == $user and $u["password"] == $pass){
 }
 else{
 	echo "Username or password is incorrect";
+	echo"<br>";
+echo "<a href='Project.php'>Return</a>";
 }
 mysqli_close($connection);
 /*
