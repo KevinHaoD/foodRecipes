@@ -3,7 +3,7 @@
 <body>
 
 <?php
-$connection = @mysqli_connect (localhost, root, BuffTech, login);
+$connection = @mysqli_connect (localhost, root, Jc2011368, login);
 if(mysqli_connect_errno())
 {
 echo "<h4>Failed to connect to MySQL:
@@ -23,6 +23,7 @@ $p = mysqli_fetch_array($queryP);
 
 if($u["username"] == $user and $p["password"] == $pass){	
 	echo "Login Successful";
+	header("location: mainpage.php");
 }
 else{
 	echo "Username or password is incorrect";

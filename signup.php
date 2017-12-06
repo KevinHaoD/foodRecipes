@@ -19,11 +19,8 @@ $user = $_REQUEST['user'];
 $pass = $_REQUEST['pass']; 
 $cpass = $_REQUEST['cpass']; 
 
-<<<<<<< HEAD
+
 if($pass == $cpass)
-=======
-if($passi == $cpass)
->>>>>>> fb01f49f8eefca43a58cda6f24c81d26c751da63
 {
 	$query = "insert into login (email, username, password) values('$email','$user','$pass');";
 	$resultset = mysqli_query($connection, $query);
