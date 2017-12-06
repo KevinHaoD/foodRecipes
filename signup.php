@@ -1,5 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <?php
-$connection = @mysqli_connect (localhost, root, Jc2011368, login);
+$connection = @mysqli_connect (localhost, root, BuffTech, login);
 if(mysqli_connect_errno())
 {
 echo "<h4>Failed to connect to MySQL:
@@ -10,24 +14,38 @@ else
 echo "<h4>Successfully connected to MySQL: </h4>";
 }
 
-$name = $_POST('name');
-$email = $_POST['email']; 
-$user = $_POST['user']; 
-$pass = $_POST['pass']; 
-$cpass = $_POST['cpass']; 
+$email = $_REQUEST['email']; 
+$user = $_REQUEST['user']; 
+$pass = $_REQUEST['pass']; 
+$cpass = $_REQUEST['cpass']; 
 
-if($pass = $cpass)
+<<<<<<< HEAD
+if($pass == $cpass)
+=======
+if($passi == $cpass)
+>>>>>>> fb01f49f8eefca43a58cda6f24c81d26c751da63
 {
-$query = "insert into login (name, email, user, pass) values($name,$email,$user,$pass);";
-$resultset = mysqli_query($query);
-echo "Inserted successfully into the database";
+	$query = "insert into login (email, username, password) values('$email','$user','$pass');";
+	$resultset = mysqli_query($connection, $query);
+	if($resultset){
+	    echo "Records added successfully.";
+	    echo"<br>";
+		echo "<a href='Project.php'>Back to sign in</a>";
+	} 
+	else{
+	    echo "ERROR: Could not able to execute $query. " . mysqli_error($connection);
+	    echo"<br>";
+	   echo "<a href='Project.php'>Try again</a>";
+	}
 }
 else
 {
 echo "Passwords don't match";
+echo"<br>";
+echo "<a href='Project.php'>Try again</a>";
 }
+mysqli_close($connection);
 /*
-if(isset($_POST
 
 function NewUser() { 
 	$name = $_POST['name']; 
@@ -56,3 +74,6 @@ if(isset($_POST['submit'])) {
 }
 */
 ?>
+
+</body>
+</html>

@@ -1,7 +1,5 @@
-
-
 <?php
-$connection = @mysqli_connect (localhost, root, Jc2011368, login);
+$connection = @mysqli_connect (localhost, root, BuffTech, login);
 if(mysqli_connect_errno())
 {
 echo "<h4>Failed to connect to MySQL:
@@ -23,7 +21,7 @@ echo "<h4>Successfully connected to MySQL: </h4>";
 <fieldset style="width:30%" align="center"><legend>Sign In</legend> 
 <table border="0"> <tr> <form method="POST" enctype="multipart/form-data" action="login.php"> 
 <tr> 
-<td>UserName</td><td> <input type="text" name="user"></td> 
+<td>Username</td><td> <input type="text" name="user"></td> 
 </tr> 
 <tr> 
 <td>Password</td><td> <input type="password" name="pass"></td> 
@@ -45,13 +43,11 @@ echo "<h4>Successfully connected to MySQL: </h4>";
 <div id="Sign Up" align="center"> 
 <fieldset style="width:30%" align="center"><legend>Sign Up</legend> 
 <table border="0"> <tr> <form method="POST" enctype="multipart/form-data" action="signup.php"> 
-<td>Name</td><td> <input type="text" name="name"></td> 
-</tr> 
 <tr> 
 <td>Email</td><td> <input type="text" name="email"></td> 
 </tr>
 <tr> 
-<td>UserName</td><td> <input type="text" name="user"></td> 
+<td>Username</td><td> <input type="text" name="user"></td> 
 </tr> 
 <tr> 
 <td>Password</td><td> <input type="password" name="pass"></td> 
@@ -68,5 +64,4 @@ echo "<h4>Successfully connected to MySQL: </h4>";
 </div> 
 </body> 
 </html>
-
 
