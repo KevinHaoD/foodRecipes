@@ -2,12 +2,7 @@
 $connection = @mysqli_connect (localhost, root, danraf12, login);
 if(mysqli_connect_errno())
 {
-echo "<h4>Failed to connect to MySQL:
-</h4>".mysqli_connect_error();
-}
-else
-{
-echo "<h4>Successfully connected to MySQL: </h4>";
+	mysqli_connect_error();
 }
 ?> 
 
@@ -15,7 +10,15 @@ echo "<h4>Successfully connected to MySQL: </h4>";
 <head>
 <title>Account Login</title>
 </head>
-<h1 align="center">Kitchen</h1>
+<style>
+h1{
+	background-color: #D4AF37
+}
+body{
+	margin: 0px
+}
+</style>
+<h1 align="left"><img src="https://imgur.com/fTXyiDr.png" style=width:55px;height:40px>Recipe Wiki</h1>
 <body id="body-color"> 
 <div id="Sign In" align="center"> 
 <fieldset style="width:30%" align="center"><legend>Sign In</legend> 

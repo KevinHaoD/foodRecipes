@@ -105,30 +105,16 @@ li.dropdown {
 </head>
 <body>
 <ul>
-  <li><a href="Home.html">RecipesWiki</a></li>
+  <li><a href="#home">RecipesWiki</a></li>
   <li><a href="#about">About</a></li>
   <il class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
     <div class="dropdown-content">
       <a href="#1">Link 1</a>
       <a href="#2">Link 2</a>
-      <a href="BuffChef.html">Link 3</a>
+      <a href="#3">Link 3</a>
     </div>
   </il>
 </ul>
-<form action="search.php" method="POST">
-      <h3>Search your favorite recipes!</h3>
-
-
-<tr>
-	<td>Search:</td> <td> <input type="text" name="food"><br></td>
-</tr>
-      <input type="submit" name="submit" value="Search!">
-    </form>
-<form action="addr.php" method="POST">
-      <h3>Or add your own!</h3>
-
-      <input type="submit" name="submit" value="Add Recipe!">
-    </form>
 </body>
 </html>
