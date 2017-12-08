@@ -1,5 +1,5 @@
 <?php
-$connection = @mysqli_connect (localhost, root, BuffTech, login);
+$connection = @mysqli_connect (localhost, root, danraf12, login);
 if(mysqli_connect_errno())
 {
 echo "<h4>Failed to connect to MySQL:

@@ -23,6 +23,7 @@ $p = mysqli_fetch_array($queryP);
 
 if($u["username"] == $user and $u["password"] == $pass){	
 	echo "Login Successful";
+	echo "<a href='Home.html'>Return</a>";
 }
 else{
 	echo "Username or password is incorrect";
