@@ -1,4 +1,4 @@
-//mainpage.php
+<!--mainPage.php-->
 <!DOCTYPE html>
 <html>
 <title>

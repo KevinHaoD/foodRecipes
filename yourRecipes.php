@@ -1,7 +1,7 @@
-//yourRecipes.php
 <?php
+/*yourRecipes.php*/
 include "mainpage.php";
-$connection = @mysqli_connect (localhost, root, Jc2011368, login);
+$connection = @mysqli_connect (localhost, root, BuffTech, login);
 $recipeQuery = mysqli_query($connection, "SELECT * FROM food");
 while ($row = mysqli_fetch_array($recipeQuery, MYSQLI_NUM)){ 
 	$i = 1;

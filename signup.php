@@ -1,4 +1,4 @@
-//signup.php
+<!--signup.html-->
 <!DOCTYPE html>
 <html>
 <body>
