@@ -64,7 +64,7 @@ return true;
 		echo "Cooking Instructions: ". $row[31]."<br>";	
 		echo '</div><br>';
 	}
-
+	mysqli_close($connection);
 ?>
 <INPUT TYPE="button" onClick="history.go(0)" VALUE="Randomize" style="float:right">
 <div2>
