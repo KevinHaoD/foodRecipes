@@ -9,7 +9,7 @@
 <body>
 
 <?php
-$connection = @mysqli_connect (localhost, root, Jc2011368, login);
+$connection = @mysqli_connect (localhost, root, BuffTech, login);
 if(mysqli_connect_errno())
 	mysqli_connect_error();
 

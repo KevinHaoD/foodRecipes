@@ -1,6 +1,6 @@
 <?php
 include "mainpage.php";
-$connection = @mysqli_connect (localhost, root, Jc2011368, login);
+$connection = @mysqli_connect (localhost, root, BuffTech, login);
 $recQuery = mysqli_query($connection, "select * from food");
 
 

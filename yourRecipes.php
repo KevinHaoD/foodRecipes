@@ -39,7 +39,7 @@ window.location.href="http://localhost/BuffTech/yourRecipes.php";
 </script>
 
 <?php
-$connection = @mysqli_connect (localhost, root, Jc2011368, login);
+$connection = @mysqli_connect (localhost, root, BuffTech, login);
 
 if(isset($_SESSION['email']))
 	$email = $_SESSION['email'];
