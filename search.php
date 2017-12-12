@@ -42,9 +42,8 @@ $queryN = mysqli_query($connection, "SELECT *  FROM food WHERE name LIKE '%$sear
 if(mysqli_num_rows($queryN)>0){
 	while($row =  mysqli_fetch_array($queryN,MYSQLI_NUM))
 	{
-		echo "<td> <form action = page.php> <input type=submit name=submit  value='$row[0]'></form></td>";
-		echo $row[32]."<br>";
-		echo '</div><br>';
+		echo "<form action = page.php> <input type=submit name=submit  value='$row[0]'></form>";
+		echo $row[32]."<br><br><br>";
 	}
 }
 else{
