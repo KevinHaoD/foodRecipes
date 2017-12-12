@@ -20,6 +20,9 @@ body{
 	margin: 0px
 }
 </style>
+<img src="https://i.imgur.com/n0iWZ1d.jpg" style="width:33%;height:65px;float:right;top:0px">
+<img src="https://i.imgur.com/n0iWZ1d.jpg" style="width:33%;height:65px;float:left;top:0px">
+<img src="https://i.imgur.com/n0iWZ1d.jpg" style="width:34%;height:65px;float:right;top:0px">
 <h1 align="center" style="color:#ffffff;">RecipeWiki<img src="https://i.imgur.com/lmQgOFd.png" style=width:65px;height:40px></h1>
 <body id="body-color"> 
 <div id="Sign In" align="center"> 

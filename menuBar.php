@@ -111,6 +111,9 @@ li.dropdown {
 </style>
 </head>
 <ul>
+<img src="https://i.imgur.com/n0iWZ1d.jpg" style="width:33%;height:65px;float:right;top:0px">
+<img src="https://i.imgur.com/n0iWZ1d.jpg" style="width:33%;height:65px;float:left;top:0px">
+<img src="https://i.imgur.com/n0iWZ1d.jpg" style="width:34%;height:65px;float:right;top:0px">
   <li><a href="mainpage.php"><b>RecipeWiki</b></a></li>
   <li><img src="https://i.imgur.com/lmQgOFd.png" style=width:65px;height:40px></li>
   <il class="dropdown">
