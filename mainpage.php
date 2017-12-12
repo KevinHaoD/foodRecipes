@@ -45,7 +45,7 @@ return true;
 </script>
 <?php
 	echo '<h1>Recipes from other people:</h1>';
-	$connection = @mysqli_connect (localhost, root, Jc2011368, login);
+	$connection = @mysqli_connect (localhost, root, BuffTech, login);
 	$recipeQuery = mysqli_query($connection, "SELECT * FROM food ORDER BY RAND() LIMIT 5");
 	while ($row = mysqli_fetch_array($recipeQuery, MYSQLI_NUM)){ 
 		$i = 1;

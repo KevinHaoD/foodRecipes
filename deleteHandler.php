@@ -1,4 +1,5 @@
 <?php
+	//deleteHandler.php
 	$connection = @mysqli_connect (localhost, root, BuffTech, login);
 	if(mysqli_connect_errno())
 	{
