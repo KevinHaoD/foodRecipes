@@ -45,7 +45,7 @@ for ($i = 1; $i <=15; $i++){
 $name = $_POST['name'];
 $prep = $_POST['prep'];
 $desc = $_POST['desc'];
-$connection = @mysqli_connect (localhost, root, BuffTech, login);
+$connection = @mysqli_connect (localhost, root, Jc2011368, login);
 
 
 $query = "INSERT INTO food (name, ammt1, ingredient1, ammt2, ingredient2, ammt3, ingredient3, ammt4, ingredient4,ammt5, ingredient5, ammt6, ingredient6 ,ammt7, ingredient7 ,ammt8, ingredient8, ammt9, ingredient9, ammt10, ingredient10, ammt11, ingredient11, ammt12, ingredient12, ammt13, ingredient13, ammt14, ingredient14, ammt15, ingredient15, prep, description) VALUES ('$name', '$ammt1', '$ingredient1', '$ammt2', '$ingredient2', '$ammt3', '$ingredient3', '$ammt4', '$ingredient4','$ammt5', '$ingredient5', '$ammt6', '$ingredient6', '$ammt7', '$ingredient7', '$ammt8', '$ingredient8', '$ammt9', '$ingredient9', '$ammt10', '$ingredient10', '$ammt11', '$ingredient11', '$ammt12', '$ingredient12', '$ammt13', '$ingredient13', '$ammt14', '$ingredient14', '$ammt15', '$ingredient15',  '$prep', '$desc');";
