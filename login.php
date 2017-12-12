@@ -1,4 +1,7 @@
 //login.php
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
 <body>
@@ -21,9 +24,12 @@ $queryU = mysqli_query($connection, "SELECT username FROM login WHERE username =
 $queryP = mysqli_query($connection, "SELECT password FROM login WHERE password = '$pass'");
 $u = mysqli_fetch_array($queryU);
 $p = mysqli_fetch_array($queryP);
+$queryE = mysqli_query($connection, "SELECT email FROM login WHERE username = '$user'");
+$e = mysqli_fetch_array($queryE);
 
 if($u["username"] == $user and $p["password"] == $pass){	
 	echo "Login Successful";
+	$_SESSION['email'] = $e["email"];
 	header("location: mainpage.php");
 }
 else{

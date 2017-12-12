@@ -1,5 +1,5 @@
-//Project.php
 <?php
+//Project.php
 $connection = @mysqli_connect (localhost, root, Jc2011368, login);
 if(mysqli_connect_errno())
 {

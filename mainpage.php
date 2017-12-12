@@ -1,135 +1,74 @@
-//mainpage.php
-<!DOCTYPE html>
+<?php
+	//mainpage.php
+	include "menuBar.php";
+?>
 <html>
-<title>
-Recipe Wiki
-</title>
-<head>
-<style>
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #D4AF37;
-}
-
-il {
-
-    float: right;
-}
-
-il a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-il a:hover, .dropdown:hover .dropbtn {
-    background-color: #ffd700;
-}
-
-il.dropdown {
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fffff4;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #D4AF37}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-li {
-
-    float: left;
-}
-
-li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: #ffd700;
-}
-
-li.dropdown {
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fffff4;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #D4AF37}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-</style>
-</head>
 <body>
-<ul>
-  <li><a href="#home">RecipeWiki</a></li>
-  <li><a href="#about">About</a></li>
-  <il class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
-    <div class="dropdown-content">
-      <a href="#1">Link 1</a>
-      <a href="yourRecipes.php">Your Recipes</a>
-      <a href="Project.php">Logout</a>
-    </div>
-  </il>
-</ul>
 <form action="search.php" method="POST">
-      <h3>Search your favorite recipes!</h3>
-
-
+<h3>Search your favorite recipes!</h3>
 <tr>
-	<td>Search:</td> <td> <input type="text" name="food"><br></td>
+<td>Search:</td> <td> <input type="text" name="food"><br></td>
 </tr>
-      <input type="submit" name="submit" value="Search!">
-    </form>
-<form action="addr.php" method="POST">
-      <h3>Or add your own!</h3>
-
-      <input type="submit" name="submit" value="Add Recipe!">
-    </form>
+<input type="submit" name="submit" value="Search!">
+</form>
+<form action="InsertFood.php" method="POST">
+<h3>Or add your own!</h3>
+<input type="submit" name="submit" value="Add Recipe!">
+</form>
 </body>
+</html>
+
+<html>
+<script type="text/javascript">
+function toggleMe(a){
+var e=document.getElementById(a);
+if(!e)return true;
+if(e.style.display=="none"){
+e.style.display="block"
+}
+else{
+e.style.display="none"
+}
+return true;
+}
+</script>
+
+<?php
+	echo '<h1>Recipes from other people:</h1>';
+	$connection = @mysqli_connect (localhost, root, Jc2011368, login);
+	$recipeQuery = mysqli_query($connection, "SELECT * FROM food ORDER BY RAND() LIMIT 5");
+	/*
+	function favoriter($fav){
+		$query = "INSERT INTO favorites(login, food) VALUES('$email', '$fav')";
+		$result = mysqli_query($connection, $query);
+		if($result){
+			echo "Successful";
+		}	
+	}
+	*/
+	while ($row = mysqli_fetch_array($recipeQuery, MYSQLI_NUM)){ 
+		$i = 1;
+		$j = 1;
+		echo '<b>'.$row[0].'</b><br>';
+		echo $row[32]."<br>";
+		echo '<input type="button" onclick="return toggleMe(\''.$row[0].'\')" value="View Recipe"><br><div id="'.$row[0].'" style="display:none">';
+		//echo '<input type="button" onclick='$favQuery = "INSERT INTO favorites(login, food) VALUES([$_REQUEST['email']], [.$row[0].])"' value="Favorite"><br><div id="'.$row[0].'">';
+		//echo '<form action="" method="post">';
+		//echo '<input type="button" name='.$row[0].'/>';
+		//echo '</form>';
+		/*
+		if(isset($_POST[$row[0]])
+			favoriter(.$row[0].);
+		*/
+		while($i < 31){
+			echo $j. ". " .$row[$i]. " " .$row[$i+1]."<br>";
+			$j++;
+			$i++;
+			$i++;
+		}	
+		echo "Cooking Instructions: ". $row[31]."<br>";	
+		echo '</div><br>';
+	}
+
+?>
 </html>
