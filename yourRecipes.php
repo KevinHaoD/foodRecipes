@@ -84,6 +84,7 @@ else{
 	<input type="submit" name="submit" value="Add Recipe!">
 	</form>';
 }
+mysqli_close($connection);
 ?>
 <div2>
 </body>

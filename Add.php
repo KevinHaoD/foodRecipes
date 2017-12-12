@@ -469,13 +469,13 @@ unit
 
 
 <tr>
-<td>preparation </td><td> <input style = "width:500px" type="text" name="prep"></td>
+<td>Preparation </td><td> <input style = "width:500px" type="text" name="prep"></td>
 </tr>
 
 
 
 <tr>
-<td>description </td><td> <input style = "width:500px" type="text" name="desc"></td>
+<td>Description </td><td> <input style = "width:500px" type="text" name="desc"></td>
 </tr>
 
 
