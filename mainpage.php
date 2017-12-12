@@ -109,15 +109,15 @@ li.dropdown {
   <li><a href="#home">RecipeWiki</a></li>
   <li><a href="#about">About</a></li>
   <il class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    <a href="javascript:void(0)" class="dropbtn">My Account/Add Recipe</a>
     <div class="dropdown-content">
-      <a href="#1">Link 1</a>
+      <a href="Add.php">Add Recipe</a>
       <a href="yourRecipes.php">Your Recipes</a>
       <a href="Project.php">Logout</a>
     </div>
   </il>
 </ul>
-<form action="search.php" method="POST">
+<form action="search.php" method="POST" align = "center">
       <h3>Search your favorite recipes!</h3>
 
 
@@ -126,7 +126,7 @@ li.dropdown {
 </tr>
       <input type="submit" name="submit" value="Search!">
     </form>
-<form action="addr.php" method="POST">
+<form action="addr.php" method="POST" align = "center">
       <h3>Or add your own!</h3>
 
       <input type="submit" name="submit" value="Add Recipe!">
