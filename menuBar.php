@@ -5,8 +5,13 @@
 <title>
 Recipe Wiki
 </title>
+<link rel="icon" href="https://i.imgur.com/lmQgOFd.png"/>
 <head>
 <style>
+body{
+margin: 0px;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -105,18 +110,15 @@ li.dropdown {
 
 </style>
 </head>
-<body>
 <ul>
-  <li><a href="mainpage.php">RecipeWiki</a></li>
-  <li><a href="#about">About</a></li>
+  <li><a href="mainpage.php"><b>RecipeWiki</b></a></li>
+  <li><img src="https://i.imgur.com/lmQgOFd.png" style=width:65px;height:40px></li>
   <il class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    <a href="javascript:void(0)" class="dropbtn"><b>Your Account</b></a>
     <div class="dropdown-content">
-      <a href="#1">Link 1</a>
       <a href="yourRecipes.php">Your Recipes</a>
       <a href="Project.php">Logout</a>
     </div>
   </il>
 </ul>
-</body>
 </html>

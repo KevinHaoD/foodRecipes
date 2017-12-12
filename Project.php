@@ -1,5 +1,6 @@
 <?php
 //Project.php
+session_destroy();
 $connection = @mysqli_connect (localhost, root, Jc2011368, login);
 if(mysqli_connect_errno())
 {
@@ -19,7 +20,7 @@ body{
 	margin: 0px
 }
 </style>
-<h1 align="left"><img src="https://imgur.com/fTXyiDr.png" style=width:55px;height:40px>Recipe Wiki</h1>
+<h1 align="center" style="color:#ffffff;">RecipeWiki<img src="https://i.imgur.com/lmQgOFd.png" style=width:65px;height:40px></h1>
 <body id="body-color"> 
 <div id="Sign In" align="center"> 
 <fieldset style="width:30%" align="center"><legend>Sign In</legend> 
