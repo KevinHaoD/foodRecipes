@@ -5,7 +5,8 @@
 		mysqli_connect_error();
 	}
 	$delete = $_REQUEST['id'];
-	echo $delete;
 	mysqli_query($connection, "DELETE FROM yourRecipes WHERE food = '$delete'");
+	mysqli_query($connection, "DELETE FROM food WHERE name = '$delete'");
+	echo "<script type='text/javascript'>alert('Successfully deleted recipe!');</script>";
 	include "yourRecipes.php";
 ?>

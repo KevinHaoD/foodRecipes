@@ -51,7 +51,7 @@ else{
 
 $recipeQuery = mysqli_query($connection, "SELECT * FROM yourRecipes WHERE login = '$email'");
 
-if($recipeQuery != ""){
+if(mysqli_num_rows($recipeQuery)>0){
 	while ($row = mysqli_fetch_array($recipeQuery, MYSQLI_NUM)){ 
 		$value = $row[1];
 		$query = mysqli_query($connection, "SELECT * FROM food WHERE name = '$value'");

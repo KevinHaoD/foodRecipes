@@ -11,13 +11,8 @@
 <?php
 $connection = @mysqli_connect (localhost, root, Jc2011368, login);
 if(mysqli_connect_errno())
-{
-echo "<h4>Failed to connect to MySQL:</h4>".mysqli_connect_error();
-}
-else
-{
-echo "<h4>Successfully connected to MySQL: </h4>";
-}
+	mysqli_connect_error();
+
 
 if(isset($_SESSION['email']))
 	$email = $_SESSION['email'];
@@ -67,17 +62,14 @@ $query = "INSERT INTO food (name, ammt1, ingredient1, ammt2, ingredient2, ammt3,
 
 $result = mysqli_query($connection, $query)or die(mysqli_error($connection));
 
-if($result)
-{
-
-	echo "Inserted successfully into the database";
-}
-
 $yourRecipeQuery = "INSERT INTO yourRecipes(food, login) VALUES('$name', '$email')";
 
 $resultRecipe = mysqli_query($connection, $yourRecipeQuery)or die(mysqli_error($connection));
 
-include 'mainpage.php';
+if($resultRecipe)
+	echo "<script type='text/javascript'>alert('Successfully added recipe!');</script>";
+
+include 'yourRecipes.php';
 ?>
 
 
