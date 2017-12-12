@@ -60,8 +60,6 @@ if(mysqli_num_rows($recipeQuery)>0){
 			$j = 1;
 			echo '<b>'.$rowR[0].'</b><br>';
 			echo $rowR[32]."<br>";
-			//echo '<form method="POST" enctype="multipart/form-data" action="deleteHandler.php">';
-			//echo '<input type="submit" name="delete" value="Delete" style="display:inline-block;float:right"></form>';	
 			echo '<input type="submit" class="button" name="'.$rowR[0].'" value="Delete" style="display:inline-block;float:right"/>'; 
 			echo '<input type="button" onclick="return toggleMe(\''.$rowR[0].'\')" value="View Recipe"><br><div id="'.$rowR[0].'" style="display:none">';
 			while($i < 31){

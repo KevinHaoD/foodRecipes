@@ -9,14 +9,7 @@
 <?php
 $connection = @mysqli_connect (localhost, root, Jc2011368, login);
 if(mysqli_connect_errno())
-{
-echo "<h4>Failed to connect to MySQL:
-</h4>".mysqli_connect_error();
-}
-else
-{
-echo "<h4>Successfully connected to MySQL: </h4>";
-}
+	mysqli_connect_error();
 
 $user = $_REQUEST['user']; 
 $pass = $_REQUEST['pass'];
